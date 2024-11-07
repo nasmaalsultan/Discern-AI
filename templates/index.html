@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Main Page</title>
+</head>
+<body class="bg-black text-white">
+    <header>
+        <div class="navbar">
+            <nav class="text-white font-serif text-[22px] mx-0 my-5 bg-zinc-800">
+                <ul class="text-center">
+                    <li class="mx-3 inline-block">
+                        <a href="{{ url_for('about') }}" class="hover:bg-zinc-600 rounded-lg">About</a>
+                    </li>
+                    <li class="mx-3 inline-block">
+                        <a href="{{ url_for('contact') }}" class="hover:bg-zinc-600 rounded-lg">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="text-center my-24">
+        <h1 class="text-[40px] font-bold mb-5">Welcome to Discern AI</h1>
+        <p class="text-[20px] mb-4">Explore our fact checker below!</p>
+        <a href="{{ url_for('second') }}">
+            <button class="rounded-xl bg-white text-black h-9 w-auto px-4 hover:bg-slate-100 hover:ring-2 hover:ring-offset-2 hover:ring-slate-300 transition-all">
+                Let's Start
+            </button>
+        </a>
+    </main>
+</body>
+</html>

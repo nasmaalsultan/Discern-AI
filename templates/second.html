@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Fact Checker</title>
+</head>
+<body class="bg-black">
+    <header>
+        <div class="navbar">
+            <nav class="text-white font-serif text-[22px] mx-0 my-5 bg-zinc-800">
+                <ul class="text-center">
+                    <li class="mx-3 inline-block">
+                        <a href="{{ url_for('index') }}" class="hover:bg-zinc-600 rounded-lg">Main</a>
+                    </li>
+                    <li class="mx-3 inline-block">
+                        <a href="{{ url_for('about') }}" class="hover:bg-zinc-600 rounded-lg">About</a>
+                    </li>
+                    <li class="mx-3 inline-block">
+                        <a href="{{ url_for('contact') }}" class="hover:bg-zinc-600 rounded-lg">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="text-center my-24 text-[20px]">
+        <form action="{{ url_for('fact_check') }}" method="POST">
+            <label class="text-white font-serif">Check The Accuracy of Facts:</label><br>
+            <input type="text" name="fact" placeholder="Check facts here" required><br>
+            <button type="submit" class="rounded-xl bg-white text-black h-9 w-auto px-4 mt-7 hover:bg-slate-100 hover:ring-2 hover:ring-offset-2 hover:ring-slate-300 transition-all">Discern</button>
+        </form>
+    </main>
+</body>
+</html>

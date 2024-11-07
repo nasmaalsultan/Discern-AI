@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Fact Checker Result</title>
+</head>
+<body class="bg-black text-white">
+    <header>
+        <div class="navbar">
+            <nav class="text-white font-serif text-[22px] mx-0 my-5 bg-zinc-800">
+                <ul class="text-center">
+                    <li class="mx-3 inline-block">
+                        <a href="{{ url_for('index') }}" class="hover:bg-zinc-600 rounded-lg">Main</a>
+                    </li>
+                    <li class="mx-3 inline-block">
+                        <a href="{{ url_for('about') }}" class="hover:bg-zinc-600 rounded-lg">About</a>
+                    </li>
+                    <li class="mx-3 inline-block">
+                        <a href="{{ url_for('contact') }}" class="hover:bg-zinc-600 rounded-lg">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="text-center my-24">
+        <h1 class="text-[30px] font-bold mb-5">Fact-Checking Result</h1>
+        <div class="bg-gray-800 p-5 rounded-lg max-w-lg mx-auto">
+            <p class="text-lg mb-4">{{ result }}</p>
+        </div>
+        <div class="mt-5">
+            <a href="{{ url_for('second') }}" class="rounded-xl bg-white text-black h-9 w-auto px-4 hover:bg-slate-100 transition-all">Check Another Fact</a>
+        </div>
+    </main>
+</body>
+</html>
